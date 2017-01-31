@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+       #map {
+        height: 200px;
+        width: 30%;
+       }
+    </style>
+  </head>
+  <body>
+    <h3>My Google Maps Demo</h3>
+       {% if teams %}
+            {% for team in teams %}
+    <p id = "#latt">{{team.team_lat  }}</p>
+    <p id = "#longg">{{ team.team_long }}</p>
+    <div id="map"></div>
+
+            {% endfor %}
+            {% endif %}
+
+
+    <script>
+      function initMap() {
+        var latt = document.getElementById('latt');
+        var longg = document.getElementById('longg');
+        var uluru = {lat: latt, lng: longg};
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 4,
+          center: uluru
+        });
+        var marker = new google.maps.Marker({
+          position: uluru,
+          map: map
+        });
+      }
+    </script>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap">
+    </script>
+  </body>
+</html>
