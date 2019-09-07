@@ -8,4 +8,7 @@ Web App and Android application built for DJCSI Codeshastra -Round 0. The androi
 - **HTML, CSS and Bootstrap**
 - **Google Maps API**
 
+## Screenshots
+![Home Page](https://i.imgur.com/E6xGt5l.png)
+![Logs](https://i.imgur.com/BQBW7iM.png)
 
